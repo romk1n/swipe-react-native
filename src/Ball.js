@@ -17,7 +17,6 @@ class Ball extends Component {
       </Animated.View>
     );
   }
-
 }
 
 const styles = {

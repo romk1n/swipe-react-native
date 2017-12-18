@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-//import { Button, Card } from 'react-native-elements';
+import { Card, Button } from 'react-native-elements';
 
 import Deck from './src/Deck';
 
@@ -19,9 +19,16 @@ export default class App extends React.Component {
 
   renderCard(item) {
     return (
-      <Text>
-        { item.text }
-      </Text>
+      <Card
+        title={ item.text }
+        image={{ uri: item.uri }}
+        >
+          <Text>I can customize this later </Text>
+          <Button icon={{name: 'code'}}
+            backgroundColor="#03A9F4"
+            title="Details"
+          />
+      </Card>
     );
   }
 
